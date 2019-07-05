@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../unit-4-game/assets/css/reset.css">
+    <link rel="stylesheet" href="../unit-4-game/assets/css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <!-- There will be four crystals displayed as buttons on the page.
+
+        The player will be shown a random number at the start of the game.
+        
+        When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+        
+        Your game will hide this amount until the player clicks a crystal.
+        When they do click one, update the player's score counter.
+        The player wins if their total score matches the random number from the beginning of the game.
+        
+        The player loses if their score goes above the random number.
+        
+        The game restarts whenever the player wins or loses.
+        
+        When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+        The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game. -->
+
+  <div>
+  <h1>CrystalCollector!</h1>
+</div>
+    
+    <div id="textBox">
+        <div class="row">
+            <div class="col-sm-6" style="background-color: #ffffcc">
+        
+        <p>You will be given a random number at the start of the game.</p>
+        <br>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <br>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <br>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+
+         </div>
+      </div>
+
+    </div>
+
+    <div id="numberAndScore">
+       <div class="row">
+          <div class="col-sm-2" style="background-color: lightgreen">
+        
+              <h3 id="randomNumber"></h3>
+        
+          </div>
+
+           <div class="col-sm-2" style="background-color: lightblue"> 
+               <p id="winCounter">Win:</p>
+        
+               <p id="lossesCounter">Losses:</p>
+
+          </div>
+
+        </div>
+  </div>
+
+
+
+        <div id="crystals">
+            <div class="row">
+                <div class="col-sm-1">
+                    <div id="blueCrystal">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/61DzstO1hJL._SY450_.jpg">
+                    </div>
+                </div>
+
+                <div class="col-sm-1">
+                <div id="redCrystal">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61Ls5sXOvnL._SY450_.jpg">
+                </div>
+            </div>
+
+            <div class="col-sm-1">
+                <div id="yellowCrystal">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61vsddlz1IL._SY450_.jpg">
+            </div>
+            </div>
+
+            <div class="col-sm-1">
+                <div id="greenCrystal">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/6171vUCgyUL._SY355_.jpg">
+            </div>
+            </div>
+
+    
+           </div>
+        </div>
+
+
+        <div id="container">
+           <div class="row">
+             <div class="col-sm-4" style="background-color: teal">
+                <p>Your total score is:</p>
+             </div>    
+           </div>
+       
+           <div class="row">
+             <div class="col-sm-4" style="background-color: teal">
+               <p id="totalScore"></p>
+             </div>
+           </div>
+        </div>
+
+
+    <script type="text/javascript" src="../unit-4-game/assets/javascript/game.js"></script>
+
+
+
+    
+</body>
+</html>

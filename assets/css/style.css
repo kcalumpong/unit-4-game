@@ -1,0 +1,37 @@
+h1, h3, h4, p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 25px;
+    padding: 20px;
+    background-color: orange;
+    width: 200px;
+    color: #ffffff;
+}
+
+p {
+    line-height: 25px;
+    color: green;
+}
+
+img {
+    width: 75px;
+}
+
+.col-sm-1 {
+    margin-right: 30px;
+}
+.col-sm-4 p{
+    color: #ffffff;
+    margin-top: 15px;
+}
+#totalScore {
+    color: #ffffff;
+}
+
+#randomNumber {
+    font-size: 30px;
+}
+
+
