@@ -8,15 +8,13 @@ h1, h3, h4, p {
 
 h1 {
     font-size: 25px;
-    padding: 20px;
+    padding: 6px;
     background-color: lightblue;
-    width: 200px;
-    color: #ffffff;
+    width: 200px; 
 }
 
 p {
     line-height: 25px;
-
 }
 
 img {
@@ -27,15 +25,16 @@ img {
     margin-right: 30px;
 }
 .col-sm-4 p{
-    color: #ffffff;
+    color: black;
     margin-top: 15px;
 }
-/* #totalScore {
-    color: #ffffff;
-} */
 
 #randomNumber {
     font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
 }
+
+
 
 

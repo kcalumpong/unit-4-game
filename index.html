@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +11,12 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+    <div id="entireBody" style="margin-left: 40px; margin-top:10px">
 
         <!-- There will be four crystals displayed as buttons on the page.
 
@@ -32,9 +35,13 @@
         When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
         The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game. -->
 
-  <div>
-  <h1>CrystalCollector!</h1>
-</div>
+    <div id="heading">
+        <div class="row">
+            <div class="col-sm-6" style="background-color: lightblue">
+                <h1>CrystalCollector!</h1>
+            </div>
+        </div>
+    </div>
     
     <div id="textBox">
         <div class="row">
@@ -57,21 +64,21 @@
 
     <div id="numberAndScore">
        <div class="row">
-          <div class="col-sm-2" style="background-color: beige">
+          <div class="col-sm-3" style="background-color: beige">
         
               <h3 id="randomNumber"></h3>
         
           </div>
 
-           <div class="col-sm-2" style="background-color: beige"> 
-               <p id="winCounter">Win:</p>
+           <div class="col-sm-3" style="background-color: beige"> 
+               <p id="winCounter">Win: 0</p>
         
-               <p id="lossesCounter">Losses:</p>
+               <p id="lossesCounter">Losses: 0</p>
 
           </div>
 
         </div>
-  </div>
+    </div>
 
 
 
@@ -108,21 +115,21 @@
 
         <div id="container">
            <div class="row">
-             <div class="col-sm-4" style="background-color: lightblue">
+             <div class="col-sm-6" style="background-color: lightblue">
                 <p>Your total score is:</p>
              </div>    
            </div>
        
            <div class="row">
-             <div class="col-sm-4" style="background-color: lightblue">
-               <p id="totalScore"></p>
+             <div class="col-sm-6" style="background-color: lightblue">
+               <p id="totalScore">0</p>
              </div>
            </div>
         </div>
+    </div>
 
 
     <script type="text/javascript" src="../unit-4-game/assets/javascript/game.js"></script>
-
 
 
     

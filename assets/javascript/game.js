@@ -6,64 +6,100 @@ var ninteenToOneTwenty = function() {
     return Math.floor(Math.random() * 119) + 1;
 }
 
-
-
 $(document).ready(function(){
     
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
-  
+
+    //creates a function that gives each crystal a random number 1-12
+    function randomNumberForCrystals(min, max) {
+    return Math.floor(Math.random() * (max + 1 -min) );
+    }
+
+    //
+    function setCrystalValues() {
+
+    $("#blueCrystal").attr("data-randomnumber", randomNumberForCrystals(1,12))
+    // var b = $("#blueCrystal").attr("data-randomnumber")
+    // console.log('blue',b);
+
+    $("#redCrystal").attr("data-randomnumber", randomNumberForCrystals(1,12))
+
+    $("#yellowCrystal").attr("data-randomnumber", randomNumberForCrystals(1,12))
+
+    $("#greenCrystal").attr("data-randomnumber", randomNumberForCrystals(1,12))
+
+    }
+
+    //generates a random number and pushes it to the html
+    var randomNumberGenerated;
+
+    function createRandomNumber() {
+        randomNumberGenerated = ninteenToOneTwenty()
+        $("#randomNumber").text(randomNumberGenerated);
+    }
+
+    createRandomNumber();
+    setCrystalValues();
     
-    $("#randomNumber").text(ninteenToOneTwenty);
-    
+    //created a function that each time it adds the score to the total
+    function crystalClicked(context) {
+        var crystalValue = $(context).attr("data-randomnumber");
+        totalScore += parseInt(crystalValue);
+        $("#totalScore").text(totalScore); 
+        checkIf();
+    }
 
     $("#blueCrystal").on("click", function() {
-        console.log("blue");
-        var blueCrystalVal = oneToTwelve();
-        console.log(oneToTwelve());
-        totalScore += blueCrystalVal;
-        $("#totalScore").text(totalScore); 
+        crystalClicked(this)
     })
 
     $("#redCrystal").on("click", function() {
-        console.log("red");
-        var redCrystalVal = oneToTwelve();
-        console.log(oneToTwelve());
-        $("#totalScore").text(redCrystalVal);
-        totalScore += redCrystalVal;
-        $("#totalScore").text(totalScore);
+        crystalClicked(this)
     })
 
     $("#yellowCrystal").on("click", function() {
-        console.log("yellow");
-        var yellowCrystalVal = oneToTwelve();
-        console.log(oneToTwelve());
-        $("#totalScore").text(yellowCrystalVal);
-        totalScore += yellowCrystalVal;
-        $("#totalScore").text(totalScore);
+        crystalClicked(this)
     })
 
     $("#greenCrystal").on("click", function() {
-        console.log("green");
-        var greenCrystalVal = oneToTwelve();
-        console.log(oneToTwelve());
-        $("#totalScore").text(greenCrystalVal);
-        totalScore += greenCrystalVal;
-        $("#totalScore").text(totalScore);
+        crystalClicked(this)
     })
 
-    // if totalScore === 
+
+    //created a function that checks if your score is less than or equal to the random number
+    function checkIf() {
+
+        if (totalScore === randomNumberGenerated) {
+            wins++
+            $("#winCounter").text("Wins: " + wins)
+            reset();
+            alert("You Win!")
+        } else if (totalScore > randomNumberGenerated) {
+            losses++;
+            $("#lossesCounter").text("Losses: "+ losses)
+            reset();
+            alert("You Lost!")
+        }
+
+    }
+
+    //reset when a user wins or losses
+    function reset() {
+        totalScore = 0; 
+        $("#totalScore").text(totalScore);
+        createRandomNumber();
+        setCrystalValues();
+    }
+
+
+
+
+
 
     
  
 })
-
-
-
-
-
-
-
 
 
